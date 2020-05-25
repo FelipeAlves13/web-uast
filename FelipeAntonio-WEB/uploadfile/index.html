@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <input type="file" name="imagem" id="filer">
+        <img src="" alt="" id="imagem">
+    
+    
+    <script>
+    var input = document.getElementById("filer")
+    input.onchange=function(elemento){
+            alert('1')
+            var img = document.getElementById("imagem");
+            var form = new FormData();
+            form.append("imagem",elemento.target.files[0]);
+
+            var requisicao = new XMLHttpRequest();
+            
+            requisicao.open("POST","receber.php",true);
+            requisicao.onreadystatechange=function(){
+                if (requisicao.readyState === 4 && requisicao.status === 200) {
+                    img.src=requisicao.responseText;
+                }
+            }
+            requisicao.send(form);
+        }
+    </script>
+</body>
+</html>

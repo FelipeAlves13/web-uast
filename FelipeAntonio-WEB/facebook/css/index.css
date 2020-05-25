@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=ABeeZee&family=Niramit:wght@700&family=Questrial&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap');
 body{
+    width: 100%;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -29,7 +30,11 @@ h1{
     align-items: center;
     display: flex;
 }
-
+.mapa{
+    position: absolute;
+    left: 27px;
+    top: 130px;
+}
 .login .box{
     float: left;
     padding: 10px;
@@ -67,12 +72,10 @@ main{
     top: 0px;
 }
 
-.container{
-    position: absolute;
-    right: 232px;
-}
 
 .container h2{
+    position: relative;
+    top: -194px;
     font-size: 45px;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 600;
@@ -83,7 +86,7 @@ main{
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 300;
     position: relative;
-    top: -42px;
+    top: -238px;
     left: 0px;
     letter-spacing: normal;
 }
@@ -110,19 +113,41 @@ main{
 }
 .login-mini{
     position: absolute;
-    left: 40px;
+    left: 18px;
     top: 93px;
 }
 
 .login-mini button{
-    width: 100%;
-    height: 30px;
+    visibility: hidden;
+    text-align: center;
+    width: 97%;
+    position: relative;
+    left: 4px;
+    height: 47px;
+    color: white;
+    background: linear-gradient(#4e69a2, #3b5998);
+}
+
+.container .lembrete{
+    width: 340px;
+    height: 50px;
+    position: absolute;
+    top: 19px;
+    left: 25px;
+    background-color: #fbf01d96;
+    border-radius: 4px;
+    visibility: hidden;
+}
+
+.container div span{
+    color:  #3b5998;
 }
 
 .login-mini input{
-    width: 300px;
+    visibility: hidden;
+    width: 350px;
     height: 44px;
-    margin-bottom: -5px;
+    margin-bottom: 7px;
 }
 
 .container input:nth-child(3),.container input:nth-child(2){
@@ -251,16 +276,76 @@ select{
     background: linear-gradient(#67ae55, #578843);
     background-color: #69a74e;
 }
+@media only screen and (min-width:501px){
+    .cadastrando{
+        width: 0%;
+        visibility: hidden;
+    }
 
-@media only screen and (max-width:360px){
+    .container{
+        position: absolute;
+        right: 232px;
+    }
+}
+@media only screen and (max-width:500px){
+    .mapa{
+        visibility: hidden;
+    }
+
+    a{
+        position: relative;
+        text-decoration: none;
+        top: 24px;
+        color: #385898;
+    }
+    .cadastrando{
+        width: 100%;
+        position: absolute;
+        bottom: 0px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .container {
+        width: 100%;
+        height: 75vh;
+        position: absolute;
+        
+    }
+    .cadastrese{
+        position: absolute;
+        bottom: 0px;
+        border-radius: 8px;
+        font-size: 17px;
+        /* font-weight: 900; */
+        height: 50px;
+        background-color: #05a934;
+        color: white;
+    }
+
+    .container .lembrete{
+        width: 340px;
+        height: 50px;
+        position: absolute;
+        top: 19px;
+        left: 25px;
+        background-color: #fbf01d96;
+        border-radius: 4px;
+        visibility: visible;
+    }
+  
+    .login-mini input{
+        visibility: visible;
+    }
     body{
+        width: 100%;
         margin: 0;
         padding: 0;
         box-sizing: border-box;
     }
     header{
         background: linear-gradient(#4e69a2, #3b5998);
-        width: 110%;
+        width: 113%;
         height: 81px;
         border-bottom: 1px solid #353131;
     }
@@ -276,8 +361,12 @@ select{
         top: -27px;
     }
 
+    p{
+        visibility: hidden;
+    }
+
     main{
-        width: 110%;
+        width: 113%;
     }
 
     .container h2{

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Contador&nbsp;  de&nbsp;  Palavras&nbsp;  e &nbsp;Letras</h1>
+        <div class="inventario">
+            <div class="campos-invent">
+                <label for="Palavras">N° Palavras</label>
+                <p id="palavras">00</p>
+                <input type="number" name="" id="Palavras" required>
+            </div>
+
+            <div class="campos-invent">
+                <label for="Tempo">Tempo</label>
+                <p id="temp"><span id="minutos">00</span>:<span id="segundos">00</span></p>
+                <input type="time" name="" id="Tempo" required>
+            </div>
+            <div class="campos-invent">
+                <label for="Palavras-restantes"> N°&nbsp;Palavras &nbsp;Restantes</label>
+                
+                <p id="restante">0</p>
+            </div>
+            <button>Jogar</button>
+           
+            <img src="imagens/estudante.png" alt="">
+           
+        </div>
+        <div class="campo-de-digitar">
+            <textarea name="" id="texto" ></textarea>
+        </div>
+        <script src="javaScript/decrementador.js"></script>
+    </div>
+</body>
+</html>
